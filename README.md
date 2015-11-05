@@ -8,8 +8,9 @@ Smali syntax highlighting for Vim.
 Recommend to install vim-smali with [Vundle](https://github.com/VundleVim/Vundle.vim#about).
 
 1. Add `Plugin 'mzlogin/vim-smali'` to your vimrc file.
-2. Execute `:PluginInstall`.
-3. Enjoy your colorful smali!
+2. Execute `:so $MYVIMRC` to reload your vimrc file.
+3. Execute `:PluginInstall`.
+4. Enjoy your colorful smali!
 
 ### Related Links
 
