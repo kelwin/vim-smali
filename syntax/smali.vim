@@ -83,7 +83,7 @@ syn keyword dalvikInstruction invoke-static/range invoke-interface/range filled-
 syn keyword dalvikInstruction invoke-virtual-quick/range invoke-super-quick/range const-wide 
 
 " class names (between L and ;)
-syn match dalvikName "L[^();]\+;"hs=s+1,he=e-1
+syn match dalvikName "L[^();:]\+;"hs=s+1,he=e-1
 syn region dalvikString start=+"+ end=+"+
 
 " branch labels
