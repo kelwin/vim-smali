@@ -23,7 +23,7 @@ syn keyword dalvikDirective .subannotation .annotation
 syn keyword dalvikDirective .enum .method .registers .locals .array-data
 syn keyword dalvikDirective .packed-switch 
 syn keyword dalvikDirective .sparse-switch .catch .catchall .line
-syn keyword dalvikDirective .parameter .local 
+syn keyword dalvikDirective .parameter .param .local
 syn keyword dalvikDirective .prologue .epilogue
 syn keyword dalvikDirective .source
 syn match dalvikDirective /\.end\s\+\(field\|subannotation\|annotation\|method\|array-data\)/
