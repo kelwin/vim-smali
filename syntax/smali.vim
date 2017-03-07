@@ -23,17 +23,18 @@ syn keyword dalvikDirective .subannotation .annotation
 syn keyword dalvikDirective .enum .method .registers .locals .array-data
 syn keyword dalvikDirective .packed-switch 
 syn keyword dalvikDirective .sparse-switch .catch .catchall .line
-syn keyword dalvikDirective .parameter .local 
+syn keyword dalvikDirective .parameter .param .local
 syn keyword dalvikDirective .prologue .epilogue
 syn keyword dalvikDirective .source
 syn match dalvikDirective /\.end\s\+\(field\|subannotation\|annotation\|method\|array-data\)/
 syn match dalvikDirective /\.end\s\+\(packed-switch\|sparse-switch\|parameter\|local\)/
-syn match dalvikDirective /\.restart\s+local/
+syn match dalvikDirective /\.restart\s\+local/
 
 " access modifiers
 syn keyword dalvikAccess public private protected static final synchronized bridge varargs
 syn keyword dalvikAccess native abstract strictfp synthetic constructor declared-synchronized
 syn keyword dalvikAccess interface enum annotation volatile transient
+syn match dalvikAccess "<init>"
 
 " instructions
 syn keyword dalvikInstruction goto return-void nop const/4 move-result move-result-wide 
@@ -83,11 +84,11 @@ syn keyword dalvikInstruction invoke-static/range invoke-interface/range filled-
 syn keyword dalvikInstruction invoke-virtual-quick/range invoke-super-quick/range const-wide 
 
 " class names (between L and ;)
-syn region dalvikName matchgroup=dalvikNameWrapper start="L" end=";" oneline 
-syn region dalvikString start=+"+ end=+"+
+syn match dalvikName "L\([a-zA-Z_][a-zA-Z_0-9]*/\)*[a-zA-Z_][a-zA-Z_0-9]*\(\$\([a-zA-Z_][a-zA-Z_0-9]*\)\?\)\?;"hs=s+1,he=e-1
+syn match dalvikString ;"\([^"\\]\|\\['"?\\abfnrtv]\|\\[0-7]\{1,3\}\|\\[Xx][0-9a-fA-F]\{2\}\)*";
 
 " branch labels
-syn match dalvikLabel "\<[A-Za-z0-9_]\+\>:$"
+syn match dalvikLabel "^ \+:\<[A-Za-z0-9_]\+\>$"
 
 " registers
 syn match dalvikRegister "\<[vp]\d\+\>"
