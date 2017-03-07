@@ -34,6 +34,7 @@ syn match dalvikDirective /\.restart\s\+local/
 syn keyword dalvikAccess public private protected static final synchronized bridge varargs
 syn keyword dalvikAccess native abstract strictfp synthetic constructor declared-synchronized
 syn keyword dalvikAccess interface enum annotation volatile transient
+syn match dalvikAccess "<init>"
 
 " instructions
 syn keyword dalvikInstruction goto return-void nop const/4 move-result move-result-wide 
