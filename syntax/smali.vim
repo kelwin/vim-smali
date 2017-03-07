@@ -28,7 +28,7 @@ syn keyword dalvikDirective .prologue .epilogue
 syn keyword dalvikDirective .source
 syn match dalvikDirective /\.end\s\+\(field\|subannotation\|annotation\|method\|array-data\)/
 syn match dalvikDirective /\.end\s\+\(packed-switch\|sparse-switch\|parameter\|local\)/
-syn match dalvikDirective /\.restart\s+local/
+syn match dalvikDirective /\.restart\s\+local/
 
 " access modifiers
 syn keyword dalvikAccess public private protected static final synchronized bridge varargs
