@@ -84,7 +84,7 @@ syn keyword dalvikInstruction invoke-virtual-quick/range invoke-super-quick/rang
 
 " class names (between L and ;)
 syn match dalvikName "L\([a-zA-Z_][a-zA-Z_0-9]*/\)*[a-zA-Z_][a-zA-Z_0-9]*\(\$\([a-zA-Z_][a-zA-Z_0-9]*\)\?\)\?;"hs=s+1,he=e-1
-syn region dalvikString start=+"+ end=+"+
+syn match dalvikString ;"\([^"\\]\|\\['"?\\abfnrtv]\|\\[0-7]\{1,3\}\|\\[Xx][0-9a-fA-F]\{2\}\)*";
 
 " branch labels
 syn match dalvikLabel "\<[A-Za-z0-9_]\+\>:$"
