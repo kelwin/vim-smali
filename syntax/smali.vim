@@ -87,7 +87,7 @@ syn match dalvikName "L\([a-zA-Z_][a-zA-Z_0-9]*/\)*[a-zA-Z_][a-zA-Z_0-9]*\(\$\([
 syn match dalvikString ;"\([^"\\]\|\\['"?\\abfnrtv]\|\\[0-7]\{1,3\}\|\\[Xx][0-9a-fA-F]\{2\}\)*";
 
 " branch labels
-syn match dalvikLabel "\<[A-Za-z0-9_]\+\>:$"
+syn match dalvikLabel "^ \+:\<[A-Za-z0-9_]\+\>$"
 
 " registers
 syn match dalvikRegister "\<[vp]\d\+\>"
